@@ -1,0 +1,15 @@
+C:\Users\Administrator\ph\bin\Debug\net8.0-windows\ph.exe
+C:\Users\Administrator\ph\bin\Debug\net8.0-windows\ph.deps.json
+C:\Users\Administrator\ph\bin\Debug\net8.0-windows\ph.runtimeconfig.json
+C:\Users\Administrator\ph\bin\Debug\net8.0-windows\ph.dll
+C:\Users\Administrator\ph\bin\Debug\net8.0-windows\ph.pdb
+C:\Users\Administrator\ph\obj\Debug\net8.0-windows\ph.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\ph\obj\Debug\net8.0-windows\ph.AssemblyInfoInputs.cache
+C:\Users\Administrator\ph\obj\Debug\net8.0-windows\ph.AssemblyInfo.cs
+C:\Users\Administrator\ph\obj\Debug\net8.0-windows\ph.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\ph\obj\Debug\net8.0-windows\ph.sourcelink.json
+C:\Users\Administrator\ph\obj\Debug\net8.0-windows\ph.dll
+C:\Users\Administrator\ph\obj\Debug\net8.0-windows\refint\ph.dll
+C:\Users\Administrator\ph\obj\Debug\net8.0-windows\ph.pdb
+C:\Users\Administrator\ph\obj\Debug\net8.0-windows\ph.genruntimeconfig.cache
+C:\Users\Administrator\ph\obj\Debug\net8.0-windows\ref\ph.dll
