@@ -1,12 +1,91 @@
+using System.CodeDom;
+
 namespace ph;
 
 public partial class Form1 : Form
 {
-    public Form1()
+    private string userRole; // This will be set during login
+    public Form1(string userRole)
     {
         InitializeComponent();
+        this.userRole = userRole;
+        LoadDashboard();
     }
-        // Event handler for adding a task to the DataGridView
+    public void LoadDashboard(){
+        if (userRole == "Employee"){
+            ShowEmployeeDashboard();
+        }else if (userRole == "Project Manager"){
+            ShowPMDashboard();
+        }else{
+            Console.WriteLine("Unknown user role");
+        }
+    }
+    public void ShowEmployeeDashboard(){
+        Button taskAssignmentsButton = new Button
+        {
+            Text = "Task Assignments",
+            Location = new System.Drawing.Point(50, 50),
+            Size = new System.Drawing.Size(200, 40)
+        };
+        taskAssignmentsButton.Click += TaskAssignmentsButton_Click;
+
+        Button ganttChartButton = new Button
+        {
+            Text = "Gantt Chart",
+            Location = new System.Drawing.Point(50, 100),
+            Size = new System.Drawing.Size(200, 40)
+        };
+        ganttChartButton.Click += GanttChartButton_Click;
+
+        this.Controls.Add(taskAssignmentsButton);
+        this.Controls.Add(ganttChartButton);        
+    }
+    public void ShowPMDashboard(){
+        Button taskAssignmentsButton = new Button
+        {
+            Text = "Task Assignments",
+            Location = new System.Drawing.Point(50, 50),
+            Size = new System.Drawing.Size(200, 40)
+        };
+        taskAssignmentsButton.Click += ProjectManagerTaskAssignmentsButton_Click;
+
+        Button ganttChartButton = new Button
+        {
+            Text = "Gantt Chart",
+            Location = new System.Drawing.Point(50, 100),
+            Size = new System.Drawing.Size(200, 40)
+        };
+        ganttChartButton.Click += ProjectManagerGanttChartButton_Click;
+
+        Button dashboardButton = new Button
+        {
+            Text = "Dashboard",
+            Location = new System.Drawing.Point(50, 150),
+            Size = new System.Drawing.Size(200, 40)
+        };
+        dashboardButton.Click += DashboardButton_Click;
+
+        this.Controls.Add(taskAssignmentsButton);
+        this.Controls.Add(ganttChartButton);
+        this.Controls.Add(dashboardButton);
+    }
+
+    public void TaskAssignmentsButton_Click(object sender, EventArgs e){
+        MessageBox.Show("Opening Employee Task Assessment...");
+    }
+    public void ProjectManagerTaskAssignmentsButton_Click(object sender, EventArgs e){
+        MessageBox.Show("Opening PM Task Assessment...");
+    }
+    public void GanttChartButton_Click(object sender, EventArgs e){
+        MessageBox.Show("Employee Gantt chart...");
+    }
+    public void ProjectManagerGanttChartButton_Click(object sender, EventArgs e){
+        MessageBox.Show("PM Gantt chart...");
+    }
+    public void DashboardButton_Click(object sender, EventArgs e){
+        MessageBox.Show("Opening Project Manager Dashboard...");
+    }
+    // Event handler for adding a task to the DataGridView
     private void AddTaskButton_Click(object sender, EventArgs e)
     {
         string taskName = this.taskNameTextBox.Text;
